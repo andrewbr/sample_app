@@ -8,4 +8,5 @@ doc/api
 doc/app
 *.swp
 *~
+rspec
 .DS_Store
