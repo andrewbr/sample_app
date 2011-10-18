@@ -8,6 +8,7 @@ doc/api
 doc/app
 *.swp
 *~
+rspec/
 /rspec/
 /rspec/*
 rspec/*
