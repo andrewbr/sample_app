@@ -42,7 +42,7 @@ nav ul,li a:visited {
     color:#09c;
 }
 
-.nav a {
+a {
     color:#09c;
     text-decoration: none;
 }
@@ -55,4 +55,11 @@ nav ul,li a:visited {
 .nav a:visited {
     color:#099;
     text-decoration: none;
+}
+
+.nav_footer {
+    width: 710px;
+    float:none;
+    text-align: center;
+    
 }
