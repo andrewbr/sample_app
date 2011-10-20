@@ -17,6 +17,7 @@ describe PagesController do
                                       :content => "Home")
     end
     # REGULAR EXPRESSION RUBULAR . COM - testung for blanks
+    # also this structure will work for testing any blanks
     it "should have NO blanks in body" do
       get 'home'
       response.body.should_not =~ /<body>\s*<\/body>/
