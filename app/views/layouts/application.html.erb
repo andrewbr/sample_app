@@ -2,9 +2,13 @@
 <html>
   <head>
     <title><%= title %></title>
-  </head>
+  
   <!-- cross site request forgery proc -->
   <%= csrf_meta_tag %>
+  <!-- auto uncache on -->
+  <%= stylesheet_link_tag 'stylesheet', :media => 'screen' %>
+  <%= stylesheet_link_tag 'print', :media => 'print' %>
+  </head>
   <body>
   <!-- allows input of content -->
     <%= yield %>
