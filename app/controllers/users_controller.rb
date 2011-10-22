@@ -6,5 +6,9 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    #User Page proc for script bs
+    @title = @user.name
   end
+  
+  
 end
