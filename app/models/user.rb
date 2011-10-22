@@ -1,9 +1,14 @@
 # id :int
 # name: string
-#email: string
-#t.timestamp
+# email: string
+# encrypted_password :string
+# t.timestamp
 class User < ActiveRecord::Base
-  attr_accessible :name, :email
+  
+  
+  attr_accessor :password
+  #access to change
+  attr_accessible :name, :email, :password, :password_confirmation
  
  
   #regualr expression for address testing validity
@@ -15,4 +20,9 @@ class User < ActiveRecord::Base
   validates :email, :presence   => true,
                     :format     => { :with => email_regex },
                     :uniqueness => { :case_sensitive => false}
+
+  validates :password,  :presence     => true,
+                        :confirmation => true,
+                        #within = inbetween
+                        :length   => {:within => 6..40}
 end
