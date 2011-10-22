@@ -1,5 +1,6 @@
 body {
-    background-color:#cff;
+    border-top: solid 2px #000;
+    background-color:#fff;
     font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
 }
 
