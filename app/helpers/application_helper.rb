@@ -12,4 +12,7 @@ module ApplicationHelper
       "#{base_title} - #{@title} - Swap Online"
     end
   end
+  def logo
+    image_tag("Micasa.png", :alt => "Micasa Exchange", :class => "round")
+  end
 end
