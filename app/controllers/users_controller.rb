@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+ #If users are not signed in. Must limit access using before_filter
+ #also look in the private methods for complete actions
+ before_filter :authenticate, :only => [:edit, :update]
+ 
+ 
  
   def new
     @title = "Sign Up"
@@ -36,5 +41,13 @@ class UsersController < ApplicationController
       @title = "Edit User"
     end
   end
+  
+  private
+  
+  #deny access in sessions_helper
+  def authenticate
+    deny_access unless signed_in?
+  end
+
   
 end
