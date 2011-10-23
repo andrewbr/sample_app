@@ -73,6 +73,11 @@ a {
 
 
  /* FORM STYLES */
+ 
+ .red {
+    color: red;
+    
+ }
 .new_user {  background-color: silver;
              width: 405px;
              margin: 0 auto;

@@ -1,0 +1,18 @@
+<% if @user.errors.any? %>
+  <div id="error_exp">
+    <h3  class="red">
+      <%= pluralize(@user.errors.count, "error") %>
+      stopped the save.
+    </h3>
+    <p>There were problems with the following fields</p>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    </ul>
+   
+    <% end %>
+  
+  </div>
+   <br />
+    <br />
+<% end %>

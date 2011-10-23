@@ -21,6 +21,13 @@
         </nav>
       </header>
       <section class="round">
+        <!-- Flash Messahges can
+        style the falsh message according to value now-->
+        <% flash.each do |key, value| %>
+          <div class="flash <%= key %>">
+           <%= value %>
+          </div>
+        <% end %>
         <!-- allows input of content -->
         <%= yield %>
       </section>
