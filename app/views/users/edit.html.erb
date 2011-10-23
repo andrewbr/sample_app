@@ -1,0 +1,8 @@
+<h1>Edit User Information</h1>
+<!--Proc forge value hidden -->
+<%= form_for(@user) do |f| %>
+  <%=render 'forms', :f  => f%>
+  <div class="actionSign">
+    <%= f.submit "Update" %><br />
+  </div>
+<% end %>

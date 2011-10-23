@@ -1,0 +1,17 @@
+<%= render 'shared/error_messages' %>
+<div class="Sign">
+  <%= f.label :name %><br />
+  <%= f.text_field :name %><br />
+</div>
+<div class="Sign">
+  <%= f.label :email %><br />
+  <%= f.text_field :email%><br />
+</div>
+<div class="Sign">
+  <%= f.label :password %><br />
+  <%= f.password_field :password%><br />
+</div>
+<div class="ConfSign">
+  <%= f.label :password_confirmation, "Confim Password" %><br />
+  <%= f.password_field :password_confirmation%><br />
+</div>

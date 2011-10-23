@@ -1,25 +1,8 @@
 <h1>Sign Up</h1>
-<!--Proc forge value hidden -->
+<!--Proc forge value hidden/ f. is rails convention for formv -->
 <%= form_for(@user) do |f| %>
-<%= render 'shared/error_messages' %>
-  <div class="Sign">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %><br />
-  </div>
-  <div class="Sign">
-    <%= f.label :email %><br />
-    <%= f.text_field :email%><br />
-  </div>
-  <div class="Sign">
-    <%= f.label :password %><br />
-    <%= f.password_field :password%><br />
-  </div>
-  <div class="ConfSign">
-    <%= f.label :password_confirmation, "Confim Password" %><br />
-    <%= f.password_field :password_confirmation%><br />
-  </div>
+  <%=render 'forms', :f => f %>
   <div class="actionSign">
-    <%= f.submit "Sign Up" %><br />
-    
+    <%= f.submit "Sign Up" %><br /> 
   </div>
 <% end %>
