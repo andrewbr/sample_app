@@ -3,6 +3,8 @@
 # email: string
 # encrypted_password :string
 # t.timestamp
+
+
 class User < ActiveRecord::Base
   
   
@@ -24,7 +26,7 @@ class User < ActiveRecord::Base
   validates :password,  :presence     => true,
                         :confirmation => true,
                         #within = inbetween
-                        :length   => {:within => 6..40}
+                        :length       => {:within => 6..40}
 
   before_save :encrypt_password
   

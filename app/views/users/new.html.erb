@@ -1,2 +1,24 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Sign Up</h1>
+<!--Proc forge value hidden -->
+<%= form_for(@user) do |f| %>
+  <div class="Sign">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %><br />
+  </div>
+  <div class="Sign">
+    <%= f.label :email %><br />
+    <%= f.text_field :email%><br />
+  </div>
+  <div class="Sign">
+    <%= f.label :password %><br />
+    <%= f.password_field :password%><br />
+  </div>
+  <div class="ConfSign">
+    <%= f.label :password_confirmation, "Confim Password" %><br />
+    <%= f.password_field :password_confirmation%><br />
+  </div>
+  <div class="actionSign">
+    <%= f.submit "Sign Up" %><br />
+    
+  </div>
+<% end %>
