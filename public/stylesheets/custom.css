@@ -17,7 +17,7 @@ h1 {
 header {
     margin-top: 0px;
     background: #fff;
-    border-bottom: solid 1px #000;
+    border-bottom: solid 1px #e5e3e3;
 }
 
 header img {
@@ -129,4 +129,9 @@ label {
     list-style: circle;
     list-style-type: circle;
     display: block;
+}
+.main {
+    min-height: 400px;
+    background-image: url('../images/background.png') ;
+    background-repeat:no-repeat;
 }

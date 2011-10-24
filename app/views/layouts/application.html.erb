@@ -6,6 +6,7 @@
     <!-- cross site request forgery proc -->
     <%= csrf_meta_tag %>
     <%= render 'layouts/stylesheets' %>
+    <%= javascript_include_tag :defaults %>
   </head>
   <body>
     <div class="container">
@@ -29,7 +30,7 @@
           </ul>
         </nav>
       </header>
-      <section class="round">
+      <section class="main">
         <!-- Flash Messahges can
         style the falsh message according to value now-->
         <% flash.each do |key, value| %>

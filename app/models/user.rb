@@ -2,6 +2,8 @@
 # name: string
 # email: string
 # encrypted_password :string
+#salt :string
+#admin :boolean
 # t.timestamp
 
 
@@ -51,8 +53,8 @@ class User < ActiveRecord::Base
     end
   end 
     
-  
-
+  #only usable inside user class
+  #only usable inside user class
   #only usable inside user class
   private
   

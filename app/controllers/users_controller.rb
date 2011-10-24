@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
  #If users are not signed in. Must limit access using before_filter
  #also look in the private methods for complete actions
- before_filter :authenticate, :only => [:edit, :update]
+ before_filter :authenticate, :only => [:index, :edit, :update, :destory]
  before_filter :correct_user, :only => [:edit, :update]
- 
+ before_filter :admin_user,   :only => :destroy
   
   def index
     @users = User.all
@@ -48,6 +48,11 @@ class UsersController < ApplicationController
     end
   end
   
+  def destroy
+    User.find(params[:id]).destroy
+    redirect_to users_path, :flash => {:success => "User Destroyed"}
+  end
+  
   private
   
   #deny access in sessions_helper
@@ -60,4 +65,8 @@ class UsersController < ApplicationController
    redirect_to(root_path) unless current_user?(@user)
   end
   
+  def admin_user
+    user  = User.find(params[:id])
+    redirect_to(root_path) if !current_user.admin? || current_user?(user)
+  end
 end
