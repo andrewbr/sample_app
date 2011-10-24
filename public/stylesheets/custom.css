@@ -31,10 +31,10 @@ section {
 
 nav {
     float: right;
-    background: #ffc;
-    margin-top: 20px;
-    margin-right:50px;
-    text-align: center;
+    background: #fff;
+    margin-top: 35px;
+    margin-right:0px;
+    text-align:center;
 
 }
 
@@ -78,12 +78,25 @@ a {
     color: red;
     
  }
-.new_user {  background-color: silver;
+.new_user {  background-color: #f2f3f3;
              width: 405px;
              margin: 0 auto;
-             border: 1px  solid grey;
+             padding: 15px;
 
 }
+.edit_user {  background-color: #f2f3f3;
+             width: 405px;
+             margin: 0 auto;
+             padding: 15px;
+
+}
+.signin {  background-color: #f2f3f3;
+             width: 405px;
+             margin: 0 auto;
+             padding: 15px;
+
+}
+
 .actionSign {
  text-align: right;
 }
@@ -120,7 +133,16 @@ label {
     font-size: 30px;
     max-width:400px;
 }
+#session_email {
 
+    font-size: 30px;
+    max-width:400px;
+}
+#session_password {
+
+    font-size: 30px;
+    max-width:400px;
+}
  /* BUTTON ? STYLES */
  
  
@@ -134,4 +156,13 @@ label {
     min-height: 400px;
     background-image: url('../images/background.png') ;
     background-repeat:no-repeat;
+}
+
+.actionSign input {
+    background-color: #4b8efa;
+    height: 37px;
+    width:70px;
+    border: 1px solid #3079ed;
+    font-weight: bold;
+    color: #fff;
 }

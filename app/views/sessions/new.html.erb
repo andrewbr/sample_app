@@ -1,17 +1,17 @@
 <h1>Sign In</h1>
- 
-<%= form_for(:session, :url => sessions_path) do |f| %>
-  <div class="Sign">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %><br />
-  </div>
-  <div class="Sign">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %><br />
-  </div>
-  <div class="actionSign">
-    <%= f.submit "Sign In" %><br />
-  </div>
-<% end %>
-
-<p> New to Miscasa? <%= link_to "Sign up now!", signup_path %> 
+<div class="signin">
+  <%= form_for(:session, :url => sessions_path) do |f|%>
+    <div class="Sign">
+      <%= f.label :email %><br />
+      <%= f.text_field :email %><br />
+    </div>
+    <div class="Sign">
+      <%= f.label :password %><br />
+      <%= f.password_field :password %><br />
+    </div>
+    <div class="actionSign">
+      <%= f.submit "Sign In" %><br />
+    </div>
+  <% end %>
+  <p class='new_signup'> New to Miscasa? <%= link_to "Sign up now!", signup_path %> 
+</div>
